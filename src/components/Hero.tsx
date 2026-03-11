@@ -1,7 +1,17 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, Check, Instagram } from 'lucide-react';
 
 export default function Hero() {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigator.clipboard.writeText('hnkaaksaud@gmail.com');
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <section
       id="home"
@@ -14,14 +24,14 @@ export default function Hero() {
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full z-10 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-4xl mx-auto px-6 md:px-12 w-full z-10 flex flex-col items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="flex flex-col gap-6 text-center lg:text-left"
+          className="flex flex-col gap-6 text-center items-center"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-sm font-medium w-fit mx-auto lg:mx-0">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-sm font-medium w-fit mx-auto">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
@@ -36,11 +46,11 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
             I build modern, responsive websites and web applications with a focus on clean code and exceptional user experiences.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mt-4">
+          <div className="flex flex-wrap items-center justify-center gap-4 mt-4">
             <a
               href="#projects"
               className="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-medium transition-all flex items-center gap-2 group shadow-lg shadow-indigo-500/25"
@@ -52,40 +62,23 @@ export default function Hero() {
               href="#contact"
               className="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 rounded-full font-medium transition-all"
             >
-              Contact Me
+              Get in Touch
             </a>
           </div>
 
-          <div className="flex items-center justify-center lg:justify-start gap-6 mt-8">
-            <a href="#" className="text-slate-500 hover:text-indigo-400 transition-colors">
+          <div className="flex items-center justify-center gap-6 mt-8">
+            <a href="https://github.com/createwithsaud" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-indigo-400 transition-colors">
               <Github className="w-6 h-6" />
             </a>
-            <a href="#" className="text-slate-500 hover:text-indigo-400 transition-colors">
+            <a href="https://www.linkedin.com/in/saud-khan-8474073b3/" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-indigo-400 transition-colors">
               <Linkedin className="w-6 h-6" />
             </a>
-            <a href="#" className="text-slate-500 hover:text-indigo-400 transition-colors">
-              <Mail className="w-6 h-6" />
+            <a href="https://www.instagram.com/saudamnhot/?hl=en" target="_blank" rel="noopener noreferrer" className="text-slate-500 hover:text-pink-500 transition-colors">
+              <Instagram className="w-6 h-6" />
             </a>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="relative hidden lg:block"
-        >
-          <div className="relative w-full aspect-square max-w-md mx-auto">
-            <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-purple-500/20 rounded-3xl rotate-6 blur-xl" />
-            <div className="absolute inset-0 bg-slate-900 border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
-              <img
-                src="https://images.unsplash.com/photo-1537511446984-935f663eb1f4?auto=format&fit=crop&q=80&w=800&h=800"
-                alt="Saud - Web Developer"
-                className="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
-            </div>
+            <button onClick={handleCopyEmail} title="Copy email address" className="text-slate-500 hover:text-indigo-400 transition-colors">
+              {copied ? <Check className="w-6 h-6 text-emerald-400" /> : <Mail className="w-6 h-6" />}
+            </button>
           </div>
         </motion.div>
       </div>

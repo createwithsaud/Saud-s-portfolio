@@ -10,16 +10,7 @@ export default function Projects() {
       image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800&h=500',
       tech: ['React', 'Tailwind', 'Motion'],
       liveUrl: '/',
-      githubUrl: '#',
-      isInternal: true,
-    },
-    {
-      title: 'Responsive Landing Page',
-      description: 'A high-conversion landing page with smooth scroll animations and a clean, modern aesthetic.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800&h=500',
-      tech: ['HTML', 'CSS', 'JavaScript'],
-      liveUrl: '/demo/landing-page',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/createwithsaud',
       isInternal: true,
     },
     {
@@ -28,7 +19,7 @@ export default function Projects() {
       image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=800&h=500',
       tech: ['React', 'Node.js', 'MongoDB'],
       liveUrl: '/demo/blog',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/createwithsaud',
       isInternal: true,
     },
     {
@@ -37,7 +28,7 @@ export default function Projects() {
       image: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800&h=500',
       tech: ['Next.js', 'Tailwind', 'Stripe'],
       liveUrl: '/demo/ecommerce',
-      githubUrl: '#',
+      githubUrl: 'https://github.com/createwithsaud',
       isInternal: true,
     },
   ];
@@ -119,6 +110,8 @@ export default function Projects() {
                   )}
                   <a
                     href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 rounded-lg font-medium transition-colors"
                   >
                     <Github className="w-4 h-4" />

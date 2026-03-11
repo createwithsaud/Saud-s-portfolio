@@ -76,14 +76,6 @@ export default function About() {
                 <p className="text-slate-400">{card.desc}</p>
               </div>
             ))}
-            <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-2xl p-6 flex items-center justify-center group">
-              <div className="text-center">
-                <span className="block text-4xl font-bold text-indigo-400 mb-2 group-hover:scale-110 transition-transform">
-                  10+
-                </span>
-                <span className="text-slate-400 font-medium">Projects Built</span>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>
