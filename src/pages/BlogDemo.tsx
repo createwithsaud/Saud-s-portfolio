@@ -120,6 +120,7 @@ export default function BlogDemo() {
                   alt={post.title} 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
               </div>
               <div className="flex items-center gap-3 mb-3">

@@ -58,7 +58,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 relative bg-slate-900/30">
+    <section id="contact" className="py-24 relative bg-slate-100/50 dark:bg-slate-900/30">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -67,8 +67,8 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-50">
-            Get In <span className="text-purple-400">Touch</span>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+            Get In <span className="text-purple-600 dark:text-purple-400">Touch</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 mt-6 mx-auto rounded-full" />
         </motion.div>
@@ -82,10 +82,10 @@ export default function Contact() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-semibold text-slate-200 mb-4">
+              <h3 className="text-2xl font-semibold text-slate-800 dark:text-slate-200 mb-4">
                 Let's talk about your project
               </h3>
-              <p className="text-slate-400 leading-relaxed max-w-md">
+              <p className="text-slate-600 dark:text-slate-400 leading-relaxed max-w-md">
                 I'm currently available for freelance work and open to new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
               </p>
             </div>
@@ -93,14 +93,14 @@ export default function Contact() {
             <div className="space-y-6">
               <button
                 onClick={handleCopyEmail}
-                className="w-full text-left flex items-center gap-4 text-slate-300 hover:text-indigo-400 transition-colors group"
+                className="w-full text-left flex items-center gap-4 text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors group"
               >
-                <div className="bg-slate-900 p-4 rounded-xl border border-white/5 group-hover:border-indigo-500/30 transition-colors">
-                  {copied ? <Check className="w-6 h-6 text-emerald-400" /> : <Mail className="w-6 h-6" />}
+                <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-white/5 group-hover:border-indigo-500/30 transition-colors shadow-sm dark:shadow-none">
+                  {copied ? <Check className="w-6 h-6 text-emerald-500 dark:text-emerald-400" /> : <Mail className="w-6 h-6" />}
                 </div>
                 <div>
                   <span className="block text-sm text-slate-500 mb-1">{copied ? 'Copied to clipboard!' : 'Email'}</span>
-                  <span className="font-medium">hnkaaksaud@gmail.com</span>
+                  <span className="font-medium text-slate-900 dark:text-slate-100">hnkaaksaud@gmail.com</span>
                 </div>
               </button>
 
@@ -108,14 +108,14 @@ export default function Contact() {
                 href="https://github.com/createwithsaud"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 text-slate-300 hover:text-purple-400 transition-colors group"
+                className="flex items-center gap-4 text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors group"
               >
-                <div className="bg-slate-900 p-4 rounded-xl border border-white/5 group-hover:border-purple-500/30 transition-colors">
+                <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-white/5 group-hover:border-purple-500/30 transition-colors shadow-sm dark:shadow-none">
                   <Github className="w-6 h-6" />
                 </div>
                 <div>
                   <span className="block text-sm text-slate-500 mb-1">GitHub</span>
-                  <span className="font-medium">github.com/createwithsaud</span>
+                  <span className="font-medium text-slate-900 dark:text-slate-100">github.com/createwithsaud</span>
                 </div>
               </a>
 
@@ -123,14 +123,14 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/saud-khan-8474073b3/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 text-slate-300 hover:text-blue-400 transition-colors group"
+                className="flex items-center gap-4 text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
               >
-                <div className="bg-slate-900 p-4 rounded-xl border border-white/5 group-hover:border-blue-500/30 transition-colors">
+                <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-white/5 group-hover:border-blue-500/30 transition-colors shadow-sm dark:shadow-none">
                   <Linkedin className="w-6 h-6" />
                 </div>
                 <div>
                   <span className="block text-sm text-slate-500 mb-1">LinkedIn</span>
-                  <span className="font-medium">Saud Khan</span>
+                  <span className="font-medium text-slate-900 dark:text-slate-100">Saud Khan</span>
                 </div>
               </a>
 
@@ -138,14 +138,14 @@ export default function Contact() {
                 href="https://www.instagram.com/saudamnhot/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 text-slate-300 hover:text-pink-500 transition-colors group"
+                className="flex items-center gap-4 text-slate-600 dark:text-slate-300 hover:text-pink-600 dark:hover:text-pink-500 transition-colors group"
               >
-                <div className="bg-slate-900 p-4 rounded-xl border border-white/5 group-hover:border-pink-500/30 transition-colors">
+                <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-white/5 group-hover:border-pink-500/30 transition-colors shadow-sm dark:shadow-none">
                   <Instagram className="w-6 h-6" />
                 </div>
                 <div>
                   <span className="block text-sm text-slate-500 mb-1">Instagram</span>
-                  <span className="font-medium">@saudamnhot</span>
+                  <span className="font-medium text-slate-900 dark:text-slate-100">@saudamnhot</span>
                 </div>
               </a>
             </div>
@@ -157,9 +157,9 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <form onSubmit={handleSubmit} className="bg-slate-900 border border-white/5 rounded-2xl p-8 space-y-6">
+            <form onSubmit={handleSubmit} className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 rounded-2xl p-8 space-y-6 shadow-sm dark:shadow-none">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-400 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
                   Your Name
                 </label>
                 <input
@@ -167,13 +167,13 @@ export default function Contact() {
                   id="name"
                   name="name"
                   required
-                  className="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors"
+                  className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors"
                   placeholder="John Doe"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-400 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
                   Your Email
                 </label>
                 <input
@@ -181,13 +181,13 @@ export default function Contact() {
                   id="email"
                   name="email"
                   required
-                  className="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors"
+                  className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors"
                   placeholder="john@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-400 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
                   Your Message
                 </label>
                 <textarea
@@ -195,13 +195,13 @@ export default function Contact() {
                   name="message"
                   required
                   rows={5}
-                  className="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors resize-none"
+                  className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-white/10 rounded-xl px-4 py-3 text-slate-900 dark:text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-colors resize-none"
                   placeholder="How can I help you?"
                 />
               </div>
 
               {error && (
-                <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-red-400 text-sm">
+                <div className="p-4 bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 rounded-xl text-red-600 dark:text-red-400 text-sm">
                   {error}
                 </div>
               )}
@@ -211,7 +211,7 @@ export default function Contact() {
                 disabled={isSubmitting || isSubmitted}
                 className={`w-full flex items-center justify-center gap-2 py-4 rounded-xl font-medium transition-all shadow-lg ${
                   isSubmitted 
-                    ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/50 shadow-emerald-500/20' 
+                    ? 'bg-emerald-50 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/50 shadow-emerald-500/10 dark:shadow-emerald-500/20' 
                     : isSubmitting
                     ? 'bg-indigo-600/50 text-white/70 cursor-not-allowed'
                     : 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-indigo-500/25 group'

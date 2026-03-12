@@ -16,7 +16,7 @@ export default function Skills() {
 
   const tools = [
     { name: 'Git', icon: <FaGitAlt className="w-12 h-12 text-[#F05032]" />, shadow: 'hover:shadow-[#F05032]/20 hover:border-[#F05032]/50' },
-    { name: 'GitHub', icon: <FaGithub className="w-12 h-12 text-white" />, shadow: 'hover:shadow-white/20 hover:border-white/50' },
+    { name: 'GitHub', icon: <FaGithub className="w-12 h-12 text-slate-800 dark:text-white" />, shadow: 'hover:shadow-slate-800/20 dark:hover:shadow-white/20 hover:border-slate-800/50 dark:hover:border-white/50' },
     { name: 'VS Code', icon: <VscVscode className="w-12 h-12 text-[#007ACC]" />, shadow: 'hover:shadow-[#007ACC]/20 hover:border-[#007ACC]/50' },
     { name: 'Figma', icon: <SiFigma className="w-12 h-12 text-[#F24E1E]" />, shadow: 'hover:shadow-[#F24E1E]/20 hover:border-[#F24E1E]/50' },
   ];
@@ -37,7 +37,7 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-24 relative bg-slate-900/30">
+    <section id="skills" className="py-24 relative bg-slate-100/50 dark:bg-slate-900/30">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -46,16 +46,16 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-50">
-            My <span className="text-purple-400">Skills</span>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+            My <span className="text-purple-600 dark:text-purple-400">Skills</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-indigo-500 mt-6 mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16">
           <div>
-            <h3 className="text-2xl font-semibold text-slate-200 mb-8 flex items-center gap-3">
-              <CodeSquare className="w-6 h-6 text-indigo-400" />
+            <h3 className="text-2xl font-semibold text-slate-800 dark:text-slate-200 mb-8 flex items-center gap-3">
+              <CodeSquare className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
               Frontend & Backend
             </h3>
             <motion.div
@@ -70,7 +70,7 @@ export default function Skills() {
                   key={skill.name}
                   variants={itemVariants}
                   whileHover={{ y: -8 }}
-                  className={`bg-slate-900/50 backdrop-blur-sm border border-white/5 rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-slate-800/80 hover:shadow-2xl transition-all duration-300 cursor-pointer group ${skill.shadow}`}
+                  className={`bg-white dark:bg-slate-900/50 backdrop-blur-sm border border-slate-200 dark:border-white/5 rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/80 hover:shadow-xl dark:hover:shadow-2xl transition-all duration-300 cursor-pointer group ${skill.shadow}`}
                 >
                   <motion.div 
                     className="relative"
@@ -81,7 +81,7 @@ export default function Skills() {
                       {skill.icon}
                     </div>
                   </motion.div>
-                  <span className="font-medium text-slate-400 group-hover:text-white transition-colors duration-300 text-sm">
+                  <span className="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white transition-colors duration-300 text-sm">
                     {skill.name}
                   </span>
                 </motion.div>
@@ -90,8 +90,8 @@ export default function Skills() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-semibold text-slate-200 mb-8 flex items-center gap-3">
-              <GitBranch className="w-6 h-6 text-purple-400" />
+            <h3 className="text-2xl font-semibold text-slate-800 dark:text-slate-200 mb-8 flex items-center gap-3">
+              <GitBranch className="w-6 h-6 text-purple-600 dark:text-purple-400" />
               Tools & Workflow
             </h3>
             <motion.div
@@ -106,7 +106,7 @@ export default function Skills() {
                   key={tool.name}
                   variants={itemVariants}
                   whileHover={{ y: -8 }}
-                  className={`bg-slate-900/50 backdrop-blur-sm border border-white/5 rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-slate-800/80 hover:shadow-2xl transition-all duration-300 cursor-pointer group ${tool.shadow}`}
+                  className={`bg-white dark:bg-slate-900/50 backdrop-blur-sm border border-slate-200 dark:border-white/5 rounded-2xl p-6 flex flex-col items-center justify-center gap-4 hover:bg-slate-50 dark:hover:bg-slate-800/80 hover:shadow-xl dark:hover:shadow-2xl transition-all duration-300 cursor-pointer group ${tool.shadow}`}
                 >
                   <motion.div 
                     className="relative"
@@ -117,7 +117,7 @@ export default function Skills() {
                       {tool.icon}
                     </div>
                   </motion.div>
-                  <span className="font-medium text-slate-400 group-hover:text-white transition-colors duration-300 text-sm">
+                  <span className="font-medium text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white transition-colors duration-300 text-sm">
                     {tool.name}
                   </span>
                 </motion.div>

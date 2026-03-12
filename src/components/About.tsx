@@ -4,17 +4,17 @@ import { MapPin, GraduationCap, Code } from 'lucide-react';
 export default function About() {
   const infoCards = [
     {
-      icon: <MapPin className="w-6 h-6 text-indigo-400" />,
+      icon: <MapPin className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />,
       title: 'Location',
       desc: 'Based in the World',
     },
     {
-      icon: <GraduationCap className="w-6 h-6 text-purple-400" />,
+      icon: <GraduationCap className="w-6 h-6 text-purple-600 dark:text-purple-400" />,
       title: 'Student Developer',
       desc: 'Passionate Learner',
     },
     {
-      icon: <Code className="w-6 h-6 text-emerald-400" />,
+      icon: <Code className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />,
       title: 'Full-Stack',
       desc: 'Learning & Building',
     },
@@ -30,8 +30,8 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="text-center md:text-left mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-50">
-            About <span className="text-indigo-400">Me</span>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+            About <span className="text-indigo-600 dark:text-indigo-400">Me</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mt-6 mx-auto md:mx-0 rounded-full" />
         </motion.div>
@@ -42,7 +42,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-6 text-lg text-slate-400 leading-relaxed"
+            className="space-y-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed"
           >
             <p>
               I am a passionate student learning web development, focused on creating modern, intuitive, and engaging user experiences. My journey in tech started with a curiosity about how things work on the internet, and it has grown into a deep love for coding.
@@ -65,15 +65,15 @@ export default function About() {
             {infoCards.map((card, index) => (
               <div
                 key={index}
-                className="bg-slate-900/50 border border-white/5 rounded-2xl p-6 hover:bg-slate-800/50 transition-colors group"
+                className="bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-white/5 rounded-2xl p-6 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors group shadow-sm dark:shadow-none"
               >
-                <div className="bg-slate-950 p-4 rounded-xl inline-block mb-4 group-hover:scale-110 transition-transform">
+                <div className="bg-slate-100 dark:bg-slate-950 p-4 rounded-xl inline-block mb-4 group-hover:scale-110 transition-transform">
                   {card.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-slate-200 mb-2">
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-200 mb-2">
                   {card.title}
                 </h3>
-                <p className="text-slate-400">{card.desc}</p>
+                <p className="text-slate-600 dark:text-slate-400">{card.desc}</p>
               </div>
             ))}
           </motion.div>
