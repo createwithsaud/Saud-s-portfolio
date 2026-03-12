@@ -10,6 +10,7 @@ const Portfolio = lazy(() => import('./pages/Portfolio'));
 const BlogDemo = lazy(() => import('./pages/BlogDemo'));
 const EcommerceDemo = lazy(() => import('./pages/EcommerceDemo'));
 const SocialDemo = lazy(() => import('./pages/SocialDemo'));
+const WeatherDemo = lazy(() => import('./pages/WeatherDemo'));
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/demo/blog" element={<BlogDemo />} />
           <Route path="/demo/ecommerce" element={<EcommerceDemo />} />
           <Route path="/demo/social" element={<SocialDemo />} />
+          <Route path="/demo/weather" element={<WeatherDemo />} />
         </Routes>
       </Suspense>
     </Router>

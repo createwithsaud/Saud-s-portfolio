@@ -41,6 +41,15 @@ export default function Projects() {
       githubUrl: 'https://github.com/createwithsaud',
       isInternal: true,
     },
+    {
+      title: 'Weather Dashboard',
+      description: 'A stunning, glassmorphism-inspired weather application providing real-time forecasts, hourly updates, and environmental metrics.',
+      image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&q=80&w=800&h=500',
+      tech: ['React', 'Tailwind', 'Motion'],
+      liveUrl: '/demo/weather',
+      githubUrl: 'https://github.com/createwithsaud',
+      isInternal: true,
+    },
   ];
 
   const [filter, setFilter] = useState('All');
