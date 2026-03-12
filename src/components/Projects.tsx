@@ -11,7 +11,7 @@ export default function Projects() {
       image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800&h=500',
       tech: ['React', 'Tailwind', 'Motion'],
       liveUrl: '/',
-      githubUrl: 'https://github.com/createwithsaud',
+      githubUrl: 'https://github.com/createwithsaud/Saud-s-portfolio',
       isInternal: true,
     },
     {
@@ -20,7 +20,7 @@ export default function Projects() {
       image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=800&h=500',
       tech: ['React', 'Node.js', 'MongoDB'],
       liveUrl: '/demo/blog',
-      githubUrl: 'https://github.com/createwithsaud',
+      githubUrl: 'https://github.com/createwithsaud/Saud-s-portfolio',
       isInternal: true,
     },
     {
@@ -29,7 +29,7 @@ export default function Projects() {
       image: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800&h=500',
       tech: ['Next.js', 'Tailwind', 'Stripe'],
       liveUrl: '/demo/ecommerce',
-      githubUrl: 'https://github.com/createwithsaud',
+      githubUrl: 'https://github.com/createwithsaud/Saud-s-portfolio',
       isInternal: true,
     },
     {
@@ -38,7 +38,7 @@ export default function Projects() {
       image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=800&h=500',
       tech: ['React', 'Firebase', 'Tailwind', 'Node.js'],
       liveUrl: '/demo/social',
-      githubUrl: 'https://github.com/createwithsaud',
+      githubUrl: 'https://github.com/createwithsaud/Saud-s-portfolio',
       isInternal: true,
     },
     {
@@ -47,7 +47,7 @@ export default function Projects() {
       image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&q=80&w=800&h=500',
       tech: ['React', 'Tailwind', 'Motion'],
       liveUrl: '/demo/weather',
-      githubUrl: 'https://github.com/createwithsaud',
+      githubUrl: 'https://github.com/createwithsaud/Saud-s-portfolio',
       isInternal: true,
     },
   ];
